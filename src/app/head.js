@@ -12,7 +12,7 @@ export default function Head() {
 
       <meta name="description" content="Google clone created by Next js 13" />
 
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="/favicon.svg" />
     </>
   );
 }
