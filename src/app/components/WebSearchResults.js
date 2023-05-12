@@ -8,7 +8,7 @@ export default function WebSearchResults({ results }) {
         About {results.searchInformation?.formattedTotalResults}results (
         {results.searchInformation?.formattedSearchTime} seconds)
       </p>
-      {results.items.map((result) => (
+      {results.items?.map((result) => (
         <div className="mb-8 maz-w-xl" key={result.link}>
           <div className="group flex flex-col">
             <Link className="text-sm truncate" href={result.link}>
