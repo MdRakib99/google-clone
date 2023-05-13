@@ -1,12 +1,13 @@
 import Link from 'next/link';
+import PaginationButton from './PaginationButton';
 
 export default function ImageSearchResults({ results }) {
   return (
-    <div className="pb-24 mt-4">
-      <div className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+    <div className="md:pb-28 pb-40  mt-4">
+      <div className="grid grid-col-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 px-3 space-x-4">
         {results.items.map((result) => {
           return (
-            <div className="mb-8" key={result.link} className="">
+            <div className="mb-8" key={result.link}>
               <div className="group">
                 <Link href={result.image.contextLink}>
                   <img
@@ -29,6 +30,9 @@ export default function ImageSearchResults({ results }) {
             </div>
           );
         })}
+      </div>
+      <div className="ml-16">
+        <PaginationButton />
       </div>
     </div>
   );
